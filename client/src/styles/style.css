@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+        position: relative;
+        font-size: 20px;
+        font-family: ui-sans-serif;
+}
+.header > a {
+    left: 100px;
+    padding-right: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #666;
+}
+.header > a:hover {
+    color: #b4d0e2;
+    transition: 0.3s;
+}

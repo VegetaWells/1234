@@ -5,15 +5,13 @@ import {TrackSearchResult} from './TrackSearchResult'
 import { Container, Form } from 'react-bootstrap'
 import SpotifyWebApi from 'spotify-web-api-node'
 import axios from 'axios'
-import {Header} from './pages/Header'
+import {Header} from './components/Header'
 
 const spotifyApi = new SpotifyWebApi({
   clientId: 'a836d7b4c8114afa8875b261bfd72d95',
 })
 
 export const Dashboard = ({ code }) => {
-  require('react-dom');
-window.React2 = require('react');
   const accessToken = useAuth(code)
   const [search, setSearch] = useState("")
   const [searchResults, setSearchResults] = useState([])
@@ -95,7 +93,7 @@ window.React2 = require('react');
           />
         ))}
         {searchResults.length === 0 && (
-          <div className="text-center" style={{ whiteSpace: "pre" }}>
+          <div className="text-center bg-light" style={{ whiteSpace: "pre" }}>
             {lyrics}
           </div>
         )}
